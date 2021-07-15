@@ -1,0 +1,245 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+body {
+  background-color: white;
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header img {
+  display: block;
+  width: 50%;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (max-width: 600px) {
+  header {
+    box-shadow: 0px 1px 6px rgb(0, 0, 0, 0.3);
+  }
+  #localisation {
+    text-align: center;
+    font-weight: 500;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 20px;
+    color: rgb(0, 0, 0, 0.7);
+    background-color: rgb(0, 0, 0, 0.1);
+    font-size: 1em;
+  }
+  #localisation span i {
+    margin-right: 15px;
+    font-size: 1.2em;
+  }
+  #reservation {
+    width: 100%;
+    padding-top: 30px;
+    padding-bottom: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background-color: #f6f6f6;
+  }
+  #reservation h1 {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    font-size: 1.7em;
+    font-weight: 600;
+  }
+  #reservation p {
+    font-size: 1.2em;
+    font-weight: 200;
+    padding-bottom: 10px;
+  }
+
+  #grosBtn {
+    margin-left: auto;
+    margin-right: auto;
+    width: 220px;
+    height: auto;
+    line-height: 40px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: rgb(255, 121, 218);
+    background-image: linear-gradient(170deg,  rgba(255, 121, 218, 1) 0%,  rgba(147, 86, 220, 1) 80%);
+    border-radius: 50px;
+    font-weight: 500;
+    background-size: 100%;
+    transition: background-size 2s;
+    box-shadow: 0px 5px 7px rgb(0, 0, 0, 0.2);
+  }
+  #grosBtn:hover {
+    background-size: 2000%;
+    box-shadow: 0px 5px 7px rgb(0, 0, 0, 0.5);
+  }
+  #grosBtn a{
+      display: block;
+      text-decoration: none;
+      color: white;
+  }
+  #fonctionnement{
+      padding-top: 20px;
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+  }
+  .etape{
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    width: 320px;
+    background-color: #f6f6f6;
+    height: 70px;
+    line-height: 70px;
+    border-radius: 20px;
+    font-weight: 600;
+    box-shadow: 0px 5px 10px rgb(0, 0, 0, 0.2);
+
+  }
+  .etape span{
+    display: inline-block;
+    width: 30px;
+    height: 30px; 
+    line-height: 30px;
+    background-color: #9356DC;
+    color: white;
+    border-radius: 50px;
+    text-align: center;
+    transform: translate(-15px);
+}
+.etape i{
+    margin-right: 15px;
+    color: rgb(0, 0, 0, 0.5);;
+}
+.etape:hover{
+      background-color: #F5EDFF;
+  }
+.etape:hover i{
+    color: #9356DC;
+}
+
+.etape:last-child{
+    background-color: #F5EDFF;
+}
+.etape:last-child i{
+  color: #9356DC;
+}
+#restaurant {
+    background-color: #f6f6f6;
+    margin-top: 60px;
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
+#restaurant h1 {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%; 
+}
+
+#restaurant article{
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%; 
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0px 5px 10px rgb(0, 0, 0, 0.2);
+}
+#restaurant article:hover{
+    box-shadow: 0px 5px 10px rgb(0, 0, 0, 0.5);
+}
+#restaurant article img{
+    object-fit:cover;
+    width: 100%;
+    height: 170px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    object-position: 50% 61%;
+
+}
+#restaurant article:last-child img{
+    object-position: 50% 80%;
+
+}
+.basArticle{
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    width: 90%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+.texteArticle{
+    width: 200px;
+}
+.basArticle h2{
+   font-size: 1.3em;
+   margin: 0;
+   padding-top:10px ;
+}
+.basArticle p{
+    margin: 0;
+    padding-top:5px ;
+    padding-bottom: 15px;
+ }
+.basArticle i{
+    margin-top: 10px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    font-size: 1.5em;
+    line-height:30px ; 
+    background: -webkit-linear-gradient( rgba(147, 86, 220, 0),rgba(255, 121, 218, 0));
+     -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+     -webkit-text-stroke: 1px;
+    -webkit-text-stroke-color :rgb(0, 0, 0);
+}
+.basArticle i:hover{
+    background: -webkit-linear-gradient( rgba(147, 86, 220, 1),rgba(255, 121, 218, 1));
+     -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+     -webkit-text-stroke: 0px;
+    -webkit-text-stroke-color :rgb(0, 0, 0);
+}
+footer{
+    background-color:#353535 ;
+    padding-bottom: 50px;
+}
+footer ul{
+    padding: 0;
+    margin: 0;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 20px;
+   list-style: none;
+}
+footer ul li{
+    line-height: 25px;
+}
+footer ul li i{
+  
+    font-size: 0.9em;
+    margin-right: 10px;
+}
+footer a{
+    color: white;
+    text-decoration: none;
+}
+#petitLogo{
+    margin-bottom: 10px;
+    width: 120px;
+    filter: invert(100%) sepia(100%) saturate(30%) hue-rotate(118deg) brightness(106%) contrast(109%);
+}
+
+
+
+
+
+
+
+}
