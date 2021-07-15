@@ -9,13 +9,12 @@ body {
 header img {
   display: block;
   width: 50%;
+  max-width: 500px;
   padding-top: 30px;
   padding-bottom: 20px;
   margin-left: auto;
   margin-right: auto;
 }
-
-@media screen and (max-width: 600px) {
   header {
     box-shadow: 0px 1px 6px rgb(0, 0, 0, 0.3);
   }
@@ -83,6 +82,7 @@ header img {
   #fonctionnement{
       padding-top: 20px;
       width: 90%;
+      max-width: 900px;
       margin-left: auto;
       margin-right: auto;
   }
@@ -230,16 +230,67 @@ footer a{
     color: white;
     text-decoration: none;
 }
+footer a:hover{
+  color: white;
+  text-decoration: underline;
+}
 #petitLogo{
     margin-bottom: 10px;
     width: 120px;
     filter: invert(100%) sepia(100%) saturate(30%) hue-rotate(118deg) brightness(106%) contrast(109%);
 }
 
+@media screen and (min-width: 601px) {
+  #fonctionnement{
+      padding-top: 20px;
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+      display: flex;
+      flex-wrap: wrap;
+  }
+  #fonctionnement h1{
+    width: 100%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+  .etape{
+    justify-content: space-around;
+    margin-top: 20px;
+    width: 270px;
+  }
+  .etape span{
+    display: inline-block;
+    transform: translate(-15px, -35px);
+}
 
+#restaurant h1 {
+    text-align: center;
+}
+#restaurant {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+#restaurant article{
+    margin-bottom: 40px;
+    width: 45%; 
+    
+}
+footer{
+    padding-bottom: 30px;
+}
 
+footer ul li{
 
-
-
+    text-align: center;
+}
 
 }
