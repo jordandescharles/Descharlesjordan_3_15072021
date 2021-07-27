@@ -7,296 +7,179 @@ body {
 }
 
 header {
-  display: flex;
-  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 5px 10px rgba(50, 50, 50, 0.2);
 }
 header img {
   display: block;
   width: 50%;
-  max-width: 500px;
+  max-width: 300px;
   padding: 30px 0 20px 0;
   margin-left: auto;
   margin-right: auto;
 }
 
-#localisation {
-  text-align: center;
-  font-weight: 500;
-  padding: 20px 20px 20px 0;
-  color: #1a1a1a;
-  background: #e6e6e6;
-  box-shadow: inset 0px 11px 8px -10px gray;
+.localisation {
+  background: rgba(219, 219, 219, 0.5);
 }
-#localisation span i {
-  margin-right: 15px;
-  font-size: 1.2em;
-}
-
-#reservation {
-  width: 100%;
-  padding: 30px 0 30PX 0;
-  text-align: center;
-  background-color: #f6f6f6;
-}
-#reservation h1 {
-  width: 80%;
-  font-size: 1.7em;
-  font-weight: 600;
-  margin: 20px auto;
-}
-#reservation p {
-  width: 80%;
-  font-weight: 200;
-  margin: 20px auto;
-}
-
-#grosBtn {
-  width: 220px;
-  height: 50px;
-  line-height: 50px;
-  border-radius: 50px;
-  background-color: #FF79DA;
-  background-size: 100%;
-  font-weight: 500;
-  box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.2);
-  margin: 20px auto;
-  box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.2);
-}
-#grosBtn:hover {
-  box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.4);
-}
-#grosBtn a {
+.localisation .__contentLocalisation {
   display: block;
-  text-decoration: none;
-  color: white;
-}
-
-#fonctionnement {
-  width: 90%;
-  max-width: 900px;
-  margin: 20px auto;
-}
-
-.etape {
-  width: 320px;
-  background: #f6f6f6;
-  height: 70px;
-  line-height: 70px;
-  border-radius: 20px;
-  font-weight: 600;
-  margin: 20px auto;
-  box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.2);
-}
-.etape:hover {
-  background: #f2eafb;
-  box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.4);
-}
-.etape:last-child {
-  background: #f2eafb;
-}
-.etape:last-child i {
-  color: #9356DC;
-}
-.etape span {
-  display: inline-block;
-  width: 30px;
-  height: 30px;
-  line-height: 30px;
-  background-color: #9356DC;
-  color: white;
-  border-radius: 50px;
   text-align: center;
-  transform: translate(-15px);
-}
-.etape:hover i {
-  color: #9356DC;
-}
-.etape i {
-  margin-right: 15px;
-  color: rgba(0, 0, 0, 0.5);
-}
-
-#restaurant {
-  background-color: #f6f6f6;
-  margin-top: 60px;
   padding: 20px 0;
 }
-#restaurant h1 {
-  width: 80%;
-  font-size: 1.7em;
-  font-weight: 600;
-  margin: 20px auto;
-  width: 90%;
+.localisation .__contentLocalisation i {
+  padding-right: 10px;
 }
-#restaurant a {
-  text-decoration: none;
-  color: #000000;
+
+.reservation {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #f6f6f6;
+  text-align: center;
+  padding: 20px 0;
 }
-#restaurant article {
-  margin: 0 auto;
-  width: 90%;
-  background-color: white;
+.reservation > * {
+  margin: 20px 0;
+}
+.reservation h1, .reservation p {
+  width: 76%;
+  margin: 10px 0;
+}
+.reservation .__bigBtn {
+  background: linear-gradient(170deg, #FF79DA, #9356DC);
+  display: block;
+  width: 220px;
+  padding: 10px 0px;
   border-radius: 20px;
   box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.2);
 }
-#restaurant article:hover {
+.reservation .__bigBtn:hover {
   box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.4);
 }
-#restaurant article:last-child img {
-  object-position: 50% 80%;
+.reservation a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
 }
-#restaurant article img {
-  object-fit: cover;
+
+.fonctionnement {
+  padding: 20px 5%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.fonctionnement h1 {
   width: 100%;
-  height: 170px;
+  text-align: left;
+}
+.fonctionnement .__etape {
+  width: calc(100% - 10px);
+  transform: translateX(5px);
+  height: 70px;
+  margin: 10px 0;
+  line-height: 70px;
+  background: #f6f6f6;
+  border-radius: 20px;
+  font-weight: 500;
+}
+.fonctionnement .__etape:last-child {
+  background-color: #f2eafb;
+}
+.fonctionnement .__etape i {
+  padding: 0 15px;
+  color: #757575;
+}
+.fonctionnement .__etape:last-child i {
+  color: #9356DC;
+}
+.fonctionnement .__etape .--circle {
+  display: inline-block;
+  background-color: #9356DC;
+  width: 20px;
+  height: 20px;
+  font-size: 0.8em;
+  text-align: center;
+  line-height: 20px;
+  border-radius: 20px;
+  color: white;
+  transform: translateX(-10px);
+}
+
+.restaurant {
+  background-color: #f6f6f6;
+  padding: 20px 5%;
+  margin: 0 auto;
+}
+.restaurant a {
+  text-decoration: none;
+  color: black;
+}
+.restaurant .__articleResto {
+  background-color: white;
+  width: 100%;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+.restaurant .__articleResto img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
-  object-position: 50% 61%;
 }
-
-.basArticle {
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 20px;
-  width: 90%;
+.restaurant .__articleResto .__basArticle {
   display: flex;
   flex-wrap: nowrap;
-  justify-content: space-between;
-}
-
-.texteArticle {
-  width: 200px;
-}
-
-.basArticle h2 {
-  font-size: 1.3em;
-  margin: 0;
+  justify-content: left;
+  padding-bottom: 20px;
   padding-top: 10px;
 }
-
-.basArticle p {
-  margin: 0;
-  padding-top: 5px;
-  padding-bottom: 15px;
+.restaurant .__articleResto .__basArticle p, .restaurant .__articleResto .__basArticle h2 {
+  margin: 0px 0 0 16px;
 }
-
-.basArticle i {
-  margin-top: 10px;
-  width: 30px;
-  height: 30px;
+.restaurant .__articleResto .__basArticle i {
+  margin-top: 5px;
+  margin-left: 40px;
+  width: 25px;
+  height: 25px;
   text-align: center;
   font-size: 1.5em;
   line-height: 30px;
-  background: -webkit-linear-gradient(rgba(147, 86, 220, 0), rgba(255, 121, 218, 0));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -webkit-text-stroke: 1px;
-  -webkit-text-stroke-color: black;
 }
-
-.basArticle i:hover {
-  background: -webkit-linear-gradient(#9356dc, #ff79da);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -webkit-text-stroke: 0px;
-  -webkit-text-stroke-color: black;
+.restaurant .__articleResto .__basArticle .__texteArticle {
+  width: 250px;
 }
 
 footer {
   background-color: #353535;
   padding-bottom: 50px;
-}
-
-footer ul {
-  padding: 0;
-  margin: 0;
-  width: 90%;
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 20px;
-  list-style: none;
-}
-
-footer ul li {
-  line-height: 25px;
-}
-
-footer ul li i {
   font-size: 0.9em;
-  margin-right: 10px;
+  padding: 20px 5%;
+  margin: 0 auto;
 }
-
 footer a {
   color: white;
   text-decoration: none;
 }
-
 footer a:hover {
-  color: white;
   text-decoration: underline;
 }
+footer .listeFooter {
+  padding: 0;
+  list-style: none;
+}
+footer .listeFooter .__ligneFooter {
+  line-height: 25px;
+}
+footer .listeFooter .__ligneFooter i {
+  margin-right: 10px;
+}
 
-#petitLogo {
+.__petitLogo {
   margin-bottom: 10px;
   width: 120px;
   filter: invert(100%) sepia(100%) saturate(30%) hue-rotate(118deg) brightness(106%) contrast(109%);
-}
-
-@media screen and (min-width: 601px) {
-  #fonctionnement {
-    padding-top: 20px;
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  #fonctionnement h1 {
-    width: 100%;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .etape {
-    justify-content: space-around;
-    margin-top: 20px;
-    width: 270px;
-  }
-
-  .etape span {
-    display: inline-block;
-    transform: translate(-15px, -35px);
-  }
-
-  #restaurant h1 {
-    text-align: center;
-  }
-
-  #restaurant {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 5%;
-    padding-right: 5%;
-  }
-
-  #restaurant article {
-    margin-bottom: 40px;
-    width: 45%;
-  }
-
-  footer {
-    padding-bottom: 30px;
-  }
-
-  footer ul li {
-    text-align: center;
-  }
 }
 
 /*# sourceMappingURL=style.css.map */
