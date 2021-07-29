@@ -1,16 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
 @import "./utils/variables";
 
+
 body {
   background-color: white;
   font-family: "Roboto", sans-serif;
   margin: 0;
   padding: 0;
- 
+    max-width: 1400px;
+    margin: 0 auto 0 auto;
 }
-header {
+.head {
     box-shadow: 0px 5px 10px rgba(50, 50, 50, 0.2);
-    img {
+    .head__logo {
         display: block;
         width: 50%;
         max-width: 300px;
@@ -21,19 +23,28 @@ header {
 }
 .localisation{
     background: rgba(219, 219, 219,0.5);
-    .__contentLocalisation{
+    .localisation__content{
         display: block;
         text-align: center;
-        padding: 20px 0;
-         i{
+        padding: 20px 0; 
+         .localisation__pin{
              padding-right: 10px;
+        }
+        .champsRecherche,.champsRecherche:focus{ 
+             cursor: pointer;
+            width:120px ;
+            border:none;
+            background-color: #eee;
+            font-size: 1.1em;
         }
     }
 }
-.reservation{
+.resa{
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     background-color: $cream;
     text-align: center;
     padding: 20px 0;
@@ -44,34 +55,36 @@ header {
        width: 76%;
        margin: 10px 0;
     }
-    .__bigBtn{
+    .resa__bigBtn{
         background: linear-gradient(170deg ,$pink,$violet);
         display: block;
         width: 220px;
-        padding:10px 0px;
-        border-radius: 20px; 
+        padding:15px 0px;
+        border-radius: 30px;
+        color: white; 
         @include ombre-btn;
         &:hover{
+            opacity: 0.9;
              @include ombre-btn-survol;
          }
     }
-    a{
-         text-decoration: none;
-         color: white;
+    .resa__link{
+         text-decoration: none; 
          font-weight: 500;    
     }
 }
-.fonctionnement{
+.fonct{
    @include centrer-bloc;
    display: flex;
    justify-content: center;
    flex-wrap: wrap;
-    h1{
+    .fonct__title{
         width: 100%;
          text-align: left;
         }
-   .__etape{
+        .fonct__etape{
         width: calc(100% - 10px);
+        max-width: 330px;
         transform: translateX(5px);
         height: 70px;
         margin: 10px 0;
@@ -79,18 +92,19 @@ header {
         background:$cream;
         border-radius: 20px;
         font-weight: 500;
+        @include ombre-btn;
         &:last-child{
             background-color: lighten($violet, 35);
         }
-        i{
+        .fonct__etape__icon{
             padding:0 15px;
             color:darken($light-grey, 40);
             
         }
-        &:last-child i{
+        &:last-child .fonct__etape__icon{
             color: $violet;
         }
-        .--circle{
+        .circle{
             display: inline-block;
             background-color: $violet;
             width: 20px;
@@ -111,44 +125,83 @@ header {
         text-decoration: none;
         color: black;
     }
-    .__articleResto{
+    .card{
         background-color: white;
         width: 100%;
         border-radius: 20px;
         margin-bottom: 20px;
-        img{
-            width: 100%;
-            height: 150px;
-            object-fit: cover;
-            border-top-left-radius: 20px;
-            border-top-right-radius: 20px;
+        position: relative;
+        @include ombre-btn;
+        &:hover{
+            @include ombre-btn-survol; 
         }
-        .__basArticle{
-            display: flex;
-            flex-wrap: nowrap;
-            justify-content: left;
-            padding-bottom:20px ;
-            padding-top:10px ;
+    }
+    .card__img{
+        width: 100%;
+        height: 170px;
+        object-fit: cover;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px; 
+        object-position: center bottom;
+        }
+    .img--center{
+        object-position: center 60%;
+    }
+    .card__nouveau{  
+        background-color: $green-mint;
+        color: darken($green-mint, 40);
+        padding: 5px 15px;
+        font-weight: 700;
+        position: absolute;
+        margin-top: 15px;
+        right: 16px;
+        }
+    .card__content{
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        padding-bottom:10px ;
+        padding-top:10px ;
+        
+        .card__content__text{
+            max-width: 250px;
             p,h2{
-                margin:0px 0 0 16px;
+                margin:0px 0 5px 16px;
+                font-size: 1.1em;
+            } 
+        } 
+        .hearts{
+            margin-top: 5px;
+            margin-right: 20px;
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            font-size: 1.5em;
+            line-height:30px ; 
+            cursor: pointer;
+            text-align: center;
+        } 
+        .heart__full{
+            position: absolute;
+            margin-top: 3px;
+            cursor: pointer;
+            background-image: linear-gradient(170deg ,$pink,$violet);
+            background-clip: text;
+            color: transparent;
+            -webkit-background-clip: text;
+        } 
+        .heart__border{
+            position: relative;
+            background: white;
+            transition: all 0.3s ease-in-out; 
+            &:hover{
+                opacity: 0;
             }
-            i{
-                margin-top: 5px;
-                margin-left: 40px;
-                width: 25px;
-                height: 25px;
-                text-align: center;
-                font-size: 1.5em;
-                line-height:30px ; 
-                }
-            .__texteArticle{
-                width: 250px;
-                
-            }   
-         }
-     }
+        }
+    }
 }
-footer{
+
+.footer{
     background-color:$footblack ;
     padding-bottom: 50px;
     font-size: 0.9em;
@@ -175,4 +228,48 @@ footer{
     margin-bottom: 10px;
     width: 120px;
     filter: invert(100%) sepia(100%) saturate(30%) hue-rotate(118deg) brightness(106%) contrast(109%);
+}
+
+@media (min-width: 481px) and (max-width:1050px)  {
+  .restaurant{
+    .card__img{
+        object-position: center center;
+        }
+  }
+  .fonct{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    .fonct__etape{
+        margin:20px 20px;
+    }
+} 
+}
+@media (min-width: 1051px)   {
+
+    .fonct{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        .fonct__etape{
+            margin:20px 20px;
+        }
+    }
+    .restaurant{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        h1{
+            width: 100%;
+        }
+        .card{
+            max-width: 45%;
+            margin-top: 20px;
+        }
+        .card__img{
+            object-position: center center;
+            }
+    }
+
 }
