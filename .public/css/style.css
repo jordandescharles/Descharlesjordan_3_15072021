@@ -1,4 +1,88 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+.loader {
+  display: block;
+  background-color: #fff;
+  height: 100%;
+  z-index: -9;
+  top: 0;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  opacity: 0;
+  animation: backopacity 5s linear 0s;
+}
+
+.round__loader {
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  z-index: 1;
+  width: 50px;
+  height: 50px;
+  margin: 0 0 -60px -30px;
+  border: 10px solid rgba(0, 0, 0, 0);
+  border-radius: 50px;
+  border-top: 10px solid #9356DC;
+  opacity: 0;
+  animation: spin 0.8s linear 0s infinite;
+  animation-iteration-count: 5;
+}
+
+.round__loader::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  width: 50px;
+  height: 50px;
+  margin: -10px 0px 0 -10px;
+  border: 10px solid rgba(0, 0, 0, 0);
+  border-radius: 50px;
+  border-bottom: 10px solid #FF79DA;
+  opacity: 0;
+  animation: spin 2s linear 1.2s;
+}
+
+.round__loader::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  width: 50px;
+  height: 50px;
+  margin: -10px 0px 0 -10px;
+  border: 10px solid rgba(0, 0, 0, 0);
+  border-radius: 50px;
+  border-top: 10px solid #99E2D0;
+  opacity: 0;
+  animation: spin 1.4s linear 2.4s;
+}
+
+@keyframes spin {
+  0% {
+    rotate: 0deg;
+    opacity: 0;
+  }
+  90% {
+    rotate: 340deg;
+    opacity: 1;
+  }
+  100% {
+    rotate: 360deg;
+    opacity: 0;
+  }
+}
+@keyframes backopacity {
+  0% {
+    opacity: 0.9;
+    z-index: 2333;
+  }
+  80% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0;
+    z-index: -9;
+  }
+}
 body {
   background-color: white;
   font-family: "Roboto", sans-serif;
