@@ -1,0 +1,182 @@
+.fas__fleche{
+    color:black;
+    position: absolute;
+     font-size: 1.5em; 
+     display: flex;
+     top:42%;
+     transform: translateX(30px);
+     -webkit-transform: translateX(30px);
+     &:hover{
+         color:$violet,;
+     }
+}
+.head.head--resto{
+ box-shadow: 0px 5px 10px rgba(50, 50, 50, 0);
+ }
+ .imgBig{
+     display: block;
+     width: 100%;
+     -o-object-fit: cover;
+        object-fit: cover;
+     max-height: 400px;
+ }
+ .main{
+    background-color: $cream;
+ }
+ .menu{
+    background-color: $cream;
+     border-top-right-radius: 40px;
+     border-top-left-radius: 40px;
+     transform: translateY(-60px);
+     -webkit-transform: translateY(-60px);
+     padding:30px 20px 0 20px;
+     line-height: 30px;
+ }
+ .headMenu{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+ }
+ .nomResto{
+    font-family: 'Shrikhand', cursive;
+    margin: 0;
+    font-size: 1.7em;
+ }
+ .heart__border.heart--bgcolor{
+     background-color: $cream;
+ }
+ .hearts.hearts--pageMenu{
+    margin: 0;
+ }
+ .sousTitre{
+    font-weight: 300;
+    font-size: 1em;
+    margin: 30px 0 0 0;
+    text-transform: uppercase;
+ }
+ .traitVert{
+     border:2px solid $green-mint;
+     background-color: $green-mint;
+     width: 40px;
+     float: left;
+     margin: 0;
+ }
+ .elementMenu{
+    opacity: 0;
+    cursor: pointer;
+    width: 100%;
+    background-color: white;
+    border-radius: 20px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    @include ombre-btn;
+    &:hover {
+        @include ombre-btn-survol;  
+        & .validation{
+            margin-right: 0em;
+        }
+        & .cercleValidation{
+            -webkit-animation: tourne 0.4s linear;
+                    animation: tourne 0.4s linear;
+        }
+    }
+    -webkit-animation: fadin 0.5s linear;
+            animation: fadin 0.5s linear;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+      .flexText{
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        
+        flex: 1;
+        font-size: 0.9em;
+       @include textCrop; 
+       padding: 12px;
+      }
+     .plat,.suitePlat{
+        @include textCrop; 
+        line-height: 22px;
+     }
+    
+     .prix{
+        font-weight: 600;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        margin: 0 12px 0px 5px;
+        height: 60px;
+        width: 30px;
+        transition:transform 1s; 
+     }
+ }
+ .elementMenu.elementMenu--2{
+    -webkit-animation-delay: 0.3s;
+            animation-delay: 0.3s;   
+}
+.elementMenu.elementMenu--3{
+    -webkit-animation-delay: 0.5s;
+            animation-delay: 0.5s;   
+}
+.elementMenu.elementMenu--4{
+    -webkit-animation-delay: 0.8s;
+            animation-delay: 0.8s;   
+}
+ .validation{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $green-mint;
+    width: 70px;
+    height: 70px;
+    margin-right: -4.5em;
+    transition-duration: .5s;
+}
+.cercleValidation{
+    color: white;
+    font-size: 1.7em;
+}
+.resa.resa--commander{
+    padding:0 0;
+    margin-top: 20px;
+}
+
+/* ANIMATIONS */
+@-webkit-keyframes fadin{
+    0%{
+        transform:translateY(10px)
+    }
+    100%{
+        opacity: 1;
+        transform:translateY(0)
+    }
+}
+@keyframes fadin{
+    0%{
+        transform:translateY(10px)
+    }
+    100%{
+        opacity: 1;
+        transform:translateY(0)
+    }
+}
+
+@-webkit-keyframes tourne{
+    0%{ 
+        transform:rotate(0deg);
+    }
+    100%{
+        transform:rotate(360deg);
+    }
+}
+
+@keyframes tourne{
+    0%{ 
+        transform:rotate(0deg);
+    }
+    100%{
+        transform:rotate(360deg);
+    }
+}

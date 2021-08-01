@@ -16,5 +16,13 @@ $footblack:#353535;
   @mixin ombre-btn-survol{
     box-shadow: 0px 5px 7px rgb(0, 0, 0, 0.35);
   }
-
+@mixin textCrop {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap; /* Don't forget this one */
+  text-overflow: ellipsis;
+ 
+  
+}
   

@@ -1,0 +1,64 @@
+@media (min-width: 481px) and (max-width:1050px)  {
+    .restaurant{
+      .card__img{
+          object-position: center center;
+          }
+    }
+    .fonct{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      .fonct__etape{
+          margin:20px 20px;
+      }
+  } 
+  }
+  @media (min-width: 900px)   {
+  .head--resto{
+      max-width: 1280px;
+      margin: auto;
+  }
+      .fonct{
+          display: flex;
+          flex-direction: row;
+          justify-content: space-around;
+          .fonct__etape{
+              margin:20px 20px;
+          }
+      }
+      .restaurant{
+          display: flex;
+          flex-direction: row;
+          justify-content: space-around;
+          flex-wrap: wrap;
+          h1{
+              width: 100%;
+          }
+          .card{
+              max-width: 45%;
+              margin-top: 20px;
+          }
+          .card__img{
+              object-position: center center;
+              }
+      }
+    .conteneurMenu{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .partMenu{
+        max-width: 360px;
+    
+      .elementMenu{
+          min-width: 330px; 
+          max-width: 360px;
+          margin-top: 20px;
+      }
+    }
+    .headMenu{
+        max-width: 320px;
+        margin:auto ;
+    }
+  
+  }

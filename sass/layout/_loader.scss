@@ -1,18 +1,14 @@
 @import "../utils/variables";
 
-
-
 .loader{
-    display: block;
     background-color:#fff;
     height: 100%;
     z-index: -9;
-    top: 0;
-    left: 0;
     width: 100%;
     position: absolute;
     opacity: 0;
-    animation: backopacity 5s linear 0s ;
+    -webkit-animation: backopacity 5s linear 0s ;
+            animation: backopacity 5s linear 0s ;
 }
 .round__loader{
     position: absolute;
@@ -28,6 +24,8 @@
     opacity: 0;
     animation: spin 0.8s linear 0s infinite;
     animation-iteration-count: 5; 
+    -webkit-animation: spin 0.8s linear 0s infinite;
+    -webkit-animation-iteration-count: 5; 
    
 }
 .round__loader::after{
@@ -42,7 +40,8 @@
     border-bottom: 10px solid $pink;
     opacity: 0; 
     animation: spin 2s linear 1.2s  ;
-   
+    -webkit-animation:  spin 2s linear 1.2s  ;
+
 
 }
 .round__loader::before{
@@ -57,39 +56,31 @@
     border-top: 10px solid $green-mint;
     opacity: 0; 
     animation: spin 1.4s linear 2.4s  ;
+    -webkit-animation: spin 1.4s linear 2.4s  ;
+
     
-    
+}
+
+@-webkit-keyframes spin{
+    0%{ transform:rotate(0deg); opacity: 0; }
+    90%{ transform:rotate(340deg); opacity: 1; }
+    100%{ transform:rotate(360deg); opacity: 0; }
 }
 
 @keyframes spin{
-    0%{
-    rotate: 0deg;
-    opacity: 0;
-    }
-   
-    90%{
-    rotate: 340deg;
-    opacity: 1;
-    }
-    100%{
-    rotate: 360deg;
-    opacity: 0;
-    }
+    0%{ transform:rotate(0deg); opacity: 0; }
+    90%{ transform:rotate(340deg); opacity: 1; }
+    100%{ transform:rotate(360deg); opacity: 0; }
+}
+
+@-webkit-keyframes backopacity{
+    0%{opacity: 0.9; z-index: 2333;}
+    80%{ opacity: 0.9;}
+    100%{opacity: 0; z-index: -9;} 
 }
 
 @keyframes backopacity{
-    0%{
-        opacity: 0.9;
-        z-index: 2333;
-        }
-    80%{
-       
-        opacity: 0.9;
-        
-    }
-    100%{
-        opacity: 0;
-        z-index: -9;
-    }
-    
+    0%{opacity: 0.9; z-index: 2333;}
+    80%{ opacity: 0.9;}
+    100%{opacity: 0; z-index: -9;} 
 }
