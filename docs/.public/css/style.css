@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
-@media (min-width: 481px) and (max-width: 1050px) {
+@media (min-width: 481px) and (max-width: 600px) {
   .restaurant .card__img {
     object-position: center center;
   }
@@ -14,13 +14,9 @@
     margin: 20px 20px;
   }
 }
-@media (min-width: 900px) {
-  .head--resto {
-    max-width: 1280px;
-    margin: auto;
-  }
-
+@media (min-width: 601px) {
   .fonct {
+    border-radius: 40px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -30,6 +26,8 @@
   }
 
   .restaurant {
+    max-width: 1280px;
+    margin: 0 auto;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -71,7 +69,7 @@
   height: 100%;
   z-index: -9;
   width: 100%;
-  position: absolute;
+  position: fixed;
   opacity: 0;
   -webkit-animation: backopacity 5s linear 0s;
   animation: backopacity 5s linear 0s;
@@ -397,11 +395,6 @@ body {
   margin: 0 auto 0 auto;
 }
 
-main {
-  max-width: 1280px;
-  margin: auto;
-}
-
 .head {
   box-shadow: 0px 5px 10px rgba(50, 50, 50, 0.2);
   position: relative;
@@ -445,6 +438,8 @@ main {
 }
 .resa > * {
   margin: 20px 0;
+  max-width: 1280px;
+  margin: auto;
 }
 .resa h1, .resa p {
   width: 76%;
@@ -456,6 +451,7 @@ main {
   width: 220px;
   padding: 15px 0px;
   border-radius: 30px;
+  margin-bottom: 10px;
   color: white;
   box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.15);
 }
@@ -469,7 +465,8 @@ main {
 }
 
 .fonct {
-  padding: 20px 5% 40px 5%;
+  max-width: 1280px;
+  padding: 40px 5% 40px 5%;
   margin: 0 auto;
   display: flex;
   justify-content: center;
@@ -478,6 +475,9 @@ main {
 }
 .fonct .fonct__title {
   width: 100%;
+  margin: 0 auto;
+  padding-bottom: 10px;
+  max-width: 1280px;
   text-align: left;
 }
 .fonct .fonct__etape {
@@ -598,7 +598,7 @@ main {
 .heart__border {
   position: relative;
   background: white;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 .heart__border:hover {
   opacity: 0;

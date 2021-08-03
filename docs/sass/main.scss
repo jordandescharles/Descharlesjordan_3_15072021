@@ -15,10 +15,7 @@ body {
   padding: 0;
 margin: 0 auto 0 auto;
 }
-main{
-    max-width: 1280px;
-    margin: auto;
-}
+
 .head {
     box-shadow: 0px 5px 10px rgba(50, 50, 50, 0.2);
     position: relative;
@@ -60,6 +57,8 @@ main{
     padding:20px 0;
     &>*{
         margin: 20px 0;
+        max-width: 1280px;
+        margin: auto;
     }
     h1,p{
        width: 76%;
@@ -71,6 +70,7 @@ main{
         width: 220px;
         padding:15px 0px;
         border-radius: 30px;
+        margin-bottom: 10px;
         color: white; 
         @include ombre-btn;
         &:hover{
@@ -84,7 +84,8 @@ main{
     }
 }
 .fonct{
-    padding:20px 5% 40px 5%;
+    max-width: 1280px;
+    padding:40px 5% 40px 5%;
     margin:0 auto; 
    display: flex;
    justify-content: center;
@@ -92,6 +93,9 @@ main{
    background-color: white;
     .fonct__title{
         width: 100%;
+        margin: 0 auto;
+        padding-bottom: 10px;
+        max-width: 1280px;
          text-align: left;
         }
         .fonct__etape{
@@ -211,7 +215,7 @@ main{
 .heart__border{
     position: relative;
     background: white;
-    transition: all 0.3s ease-in-out; 
+    transition: all 0.5s ease-in-out; 
     &:hover{
         opacity: 0;
     }
